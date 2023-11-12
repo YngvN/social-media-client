@@ -1,4 +1,5 @@
 name: Automated E2E Testing
+
 on:
   pull_request:
   workflow_dispatch:
@@ -11,7 +12,8 @@ jobs:
       - name: Checkout under $GITHUB_WORKSPACE
         uses: actions/checkout@main
 
-      - name: run cypress tests with electron
-        uses: cypress-io/github-action@v4
-        with:
-          browser: electron
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Cypress E2E tests
+        run: npm run test-e2e-cli

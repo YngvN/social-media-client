@@ -41,16 +41,12 @@ describe('login function', () => {
 
     await login(email, password);
 
-    // Extract the calls made to localStorage.setItem
     const setItemCalls = localStorage.setItem.mock.calls;
 
-    // Check if any call to localStorage.setItem had 'token' as the first argument
     const tokenSetCalls = setItemCalls.filter(call => call[0] === 'token');
 
-    // Expect at least one call with 'token' as the first argument
     expect(tokenSetCalls.length).toBeGreaterThan(0);
 
-    // Check if all 'token' calls had a non-empty string as the second argument
     tokenSetCalls.forEach(call => {
       expect(call[1]).toBeTruthy();
       expect(typeof call[1]).toBe('string');

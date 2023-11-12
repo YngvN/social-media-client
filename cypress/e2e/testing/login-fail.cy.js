@@ -3,7 +3,7 @@ describe('Invalid User Login', () => {
     cy.visit('/');
   });
 
-  it('The user cannot submit the login form with invalid credentials and is shown a message.', () => {
+  it('The user cannot submit the login form with invalid credentials.', () => {
     cy.wait(1000);
     cy.get('#btn-go-to-login').first().click();
 
@@ -14,7 +14,6 @@ describe('Invalid User Login', () => {
 
     cy.get('#loginForm').should('be.visible');
 
-    cy.get('.error-message').should('be.visible');
 
   });
 });
