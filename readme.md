@@ -1,0 +1,2 @@
+[![Automated E2E Testing](https://github.com/YngvN/social-media-client/actions/workflows/e2e-test.yml/badge.svg?branch=workflow)](https://github.com/YngvN/social-media-client/actions/workflows/e2e-test.yml)
+[![Automated Unit Testing](https://github.com/YngvN/social-media-client/actions/workflows/unit-test.yml/badge.svg?branch=workflow)](https://github.com/YngvN/social-media-client/actions/workflows/unit-test.yml)
